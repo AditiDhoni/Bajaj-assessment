@@ -5,8 +5,13 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// GET Method
+// GET /bfhl
 app.get('/bfhl', (req, res) => {
+    res.status(200).json({ operation_code: 1 });
+});
+
+// GET /bfhl/health
+app.get('/bfhl/health', (req, res) => {
     res.status(200).json({ operation_code: 1 });
 });
 
